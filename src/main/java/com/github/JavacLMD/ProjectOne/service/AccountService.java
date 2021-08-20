@@ -23,7 +23,7 @@ public class AccountService {
     }
 
     //POST "/accounts"
-    public Mono<Boolean> create(Account account) {
+    public Mono<Account> create(Account account) {
         return accountRepository.create(account);
     }
 

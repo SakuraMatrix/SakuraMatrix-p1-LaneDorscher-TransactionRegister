@@ -10,14 +10,14 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class FileUtils {
-    private static Logger log = LoggerFactory.getLogger(FileUtils.class);
+    private static final Logger log = LoggerFactory.getLogger(FileUtils.class);
 
     public static String resourceFileToString(String resourcePath) {
         try {
             Path path = Paths.get(FileUtils.class.getResource(resourcePath).toURI());
             log.debug("Found " + path);
             return Files.readString(path);
-        } catch (URISyntaxException | IOException e) {
+        } catch (URISyntaxException | IOException | NullPointerException e) {
             log.error(e.getMessage());
             return "";
         }

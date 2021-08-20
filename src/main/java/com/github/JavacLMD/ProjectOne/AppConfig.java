@@ -1,13 +1,16 @@
 package com.github.JavacLMD.ProjectOne;
 
 import com.datastax.oss.driver.api.core.CqlSession;
+
 import com.github.JavacLMD.ProjectOne.domain.Account;
 import com.github.JavacLMD.ProjectOne.domain.TransactionLog;
 import com.github.JavacLMD.ProjectOne.service.AccountService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+
 import reactor.netty.http.server.HttpServer;
 
 @Configuration
@@ -19,8 +22,7 @@ public class AppConfig {
 
     @Bean
     public CqlSession getSession() {
-        CqlSession session = CqlSession.builder().build();
-        return session;
+        return CqlSession.builder().build();
     }
 
     @Bean
