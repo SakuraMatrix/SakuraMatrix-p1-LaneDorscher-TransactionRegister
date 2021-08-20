@@ -1,0 +1,10 @@
+
+# Ignore Folders
+.idea/
+target/
+bin/
+logs/
+
+# Ignore Files
+*.iml
+*.sql
