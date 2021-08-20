@@ -35,4 +35,3 @@ Log your account transaction in this app!
   - Cassandra
   - SLF4J
   - Spring Framework
-  - 
