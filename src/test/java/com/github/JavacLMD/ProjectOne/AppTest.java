@@ -1,6 +1,7 @@
 package com.github.JavacLMD.ProjectOne;
 
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -8,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 import org.springframework.test.web.reactive.server.WebTestClient;
+import org.springframework.util.Assert;
 
 @SpringJUnitConfig(classes = AppConfig.class)
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -52,7 +54,7 @@ public class AppTest {
 
     @Test
     public void updateSingleAccount() {
-        rest.put()
+        WebTestClient.ResponseSpec successful = rest.put()
                 .uri("/accounts")
                 .body("'{\"id\":5,\"name\":\"Joe Morgan\",\"birthday\":[1998,4,22], \"balance\":1000}'", String.class)
                 .exchange()
