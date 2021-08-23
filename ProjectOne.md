@@ -1,4 +1,4 @@
-# Project 0 Requirements
+# Project 1 Requirements
 - Individual project adopting enterprise standards            
 - Theme: FinTech (Banking, Investing, Personal Finance, etc...)      -----------
 - Org Repo name: p1-username-optionalProjectName
